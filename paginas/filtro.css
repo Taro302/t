@@ -6,7 +6,7 @@
 }
 .dropdown-menu li a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #000; /* Cambia el color del texto */
+    color: white; /* Cambia el color del texto */
     display: block; /* Asegura que el enlace tome todo el ancho del elemento de la lista */
 }
 .filters{
