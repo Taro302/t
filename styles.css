@@ -440,12 +440,13 @@ body {
 .filters {
     justify-content: center;
     width: 200px;
-    background-color: #555;
+    background-color: #23252b;
     padding: 20px;
     border-right: 1px solid #0f0c0c;
 }
 h3{
     text-align: center;
+    color: white;
 }
 .catalog {
     flex: 1;
