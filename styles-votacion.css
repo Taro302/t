@@ -2,11 +2,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 #tournament-header {
-  background-color: #333;
-  color: #fff;
+  background-color: white;
+  color: black;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -57,17 +58,30 @@ body {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 10px 25%;
   font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
+  border: 1px solid #000; /* Define el borde completo */
   cursor: pointer;
-  margin: 10px; /* Espacio entre los botones */
+}
+
+/* Estilos para el botón 1 */
+#vote1 {
+  background-color: white;
+  color: black;
+}
+
+/* Estilos para el botón 2 */
+#vote2 {
+  background-color: black;
+  color: white;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: rgb(8, 3, 3);
+  color: black;
+  border: 1px solid #000; /* Define el borde completo */
+  border-radius: 2px; /* Define el radio del borde */
+  border-bottom-width: 2px; /* Define solo el ancho del borde inferior */
 }
 
 #winner-container {
@@ -78,9 +92,9 @@ button:hover {
   width: 50%; /* Video ganador ocupa el 100% del contenedor */
   height: 500px; /* Ajusta la altura si es necesario */
 }
+
 /* Estilos para el texto "Hola Mundo" */
 #greeting {
-  color: white; /* Cambiar color a blanco */
   user-select: none; /* Prevenir selección del texto */
   text-align: center; /* Centrar el texto */
   padding: 0px; /* Añadir padding para espacio alrededor del texto */
@@ -96,5 +110,3 @@ button:hover {
   margin: 0px;
   animation: anime-effect 0.5s infinite alternate; /* Añadir animación */
 }
-
-
