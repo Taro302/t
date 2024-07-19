@@ -1,3 +1,5 @@
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -33,12 +35,14 @@ body {
 .container {
   text-align: center;
   margin-top: 2rem;
+
 }
 
 #video-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 7rem; /* Añadir margen inferior para separar los botones de los videos */
+
 }
 
 #video1, #video2 {
@@ -52,9 +56,10 @@ body {
 }
 
 #button-container {
-  display: flex;
+  display:flex;
+  
   justify-content: center;
-  margin-bottom: 2rem;
+
 }
 
 button {
@@ -92,21 +97,55 @@ button:hover {
   width: 50%; /* Video ganador ocupa el 100% del contenedor */
   height: 500px; /* Ajusta la altura si es necesario */
 }
-
 /* Estilos para el texto "Hola Mundo" */
 #greeting {
   user-select: none; /* Prevenir selección del texto */
   text-align: center; /* Centrar el texto */
-  padding: 0px; /* Añadir padding para espacio alrededor del texto */
-  position: relative; /* Permitir ajustes de posición */
-  top: -200px; /* Mover el texto hacia arriba */
+  padding: 10px; /* Añadir padding para espacio alrededor del texto */
+  position: absolute; /* Posición absoluta */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Ajustar para centrar completamente */
   font-size: 4em; /* Aumentar tamaño de la fuente */
   font-weight: bold; /* Hacer el texto en negrita */
-  border: 5px solid #525ce6; /* Añadir un borde rojo */
+  border: 5px solid #525ce6; /* Añadir un borde */
   text-shadow: 2px 2px 0 #41e0f5, -2px -2px 0 #38e6fd, 2px -2px 0 #39cee9, -2px 2px 0 #33eaf7; /* Añadir sombras */
   background-color: #000; /* Fondo negro para mayor contraste */
   display: inline-block; /* Hacer que el borde envuelva solo el texto */
-  padding: 10px; /* Añadir padding para espacio alrededor del texto */
-  margin: 0px;
   animation: anime-effect 0.5s infinite alternate; /* Añadir animación */
+  z-index: 1; /* Asegurar que esté por encima de otros elementos */
+}
+
+ h3{
+  position: relative;
+  width: 50%;
+  height: 77px;
+  text-align: center;
+  left: 25%;
+ }
+
+ /* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  #video1, #video2 {
+    width: 100%; /* Cada video ocupa el 100% del contenedor en pantallas pequeñas */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  #button-container {
+    flex-direction: column;
+  }
+
+  button {
+    width: 80%; /* Aumentar el ancho de los botones en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #greeting {
+    font-size: 2em; /* Reducir el tamaño de la fuente en pantallas muy pequeñas */
+  }
+
+  button {
+    width: 100%; /* Botones ocupan el 100% del ancho del contenedor */
+  }
 }
