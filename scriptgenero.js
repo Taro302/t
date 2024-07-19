@@ -1,25 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     const catalogItems = [
-        { id: 3, imgSrc: '../img/OIP.jpg', title: 'Hololive', filter: 'VTuber' },
-        { id: 2, imgSrc: '../img/anime.webp', title: 'ANIME', filter: 'Anime' },
-        { id: 1, imgSrc: '../img/hololive.webp', title: 'HOLOLIVE', filter: 'VTuber' },
-        { id: 4, imgSrc: '../img/OIP.jpg', title: 'Título de la Imagen 1', filter: 'Pop' },
-        { id: 5, imgSrc: '../img/OIP.jpg', title: 'Hololive', filter: 'VTuber' },
-        { id: 6, imgSrc: '../img/OIP.jpg', title: 'ANIME', filter: 'Anime' },
-        { id: 7, imgSrc: '../img/OIP.jpg', title: 'HOLOLIVE', filter: 'VTuber' },
-        { id: 8, imgSrc: '../img/OIP.jpg', title: 'Título de la Imagen 1', filter: 'Pop' },
-        { id: 9, imgSrc: '../img/OIP.jpg', title: 'Hololive', filter: 'VTuber' },
-        { id: 10, imgSrc: '../img/OIP.jpg', title: 'ANIME', filter: 'Anime' },
-        { id: 11, imgSrc: '../img/OIP.jpg', title: 'HOLOLIVE', filter: 'VTuber' },
-        { id: 12, imgSrc: '../img/OIP.jpg', title: 'Título de la Imagen 1', filter: 'Pop' },
-        { id: 13, imgSrc: '../img/OIP.jpg', title: 'Hololive', filter: 'VTuber' },
-        { id: 14, imgSrc: '../img/OIP.jpg', title: 'ANIME', filter: 'Anime' },
-        { id: 15, imgSrc: '../img/OIP.jpg', title: 'HOLOLIVE', filter: 'VTuber' },
-        { id: 16, imgSrc: '../img/OIP.jpg', title: 'Título de la Imagen 1', filter: 'Pop' },
-        { id: 17, imgSrc: '../img/OIP.jpg', title: 'Hololive', filter: 'VTuber' },
-        { id: 18, imgSrc: '../img/OIP.jpg', title: 'ANIME', filter: 'Anime' },
-        { id: 19, imgSrc: '../img/OIP.jpg', title: 'HOLOLIVE', filter: 'VTuber' },
         { id: 20, imgSrc: '../img/OIP.jpg', title: 'FINAL', filter: 'Rock' },
+        { id: 19, imgSrc: '../img/OIP.jpg', title: 'HOLOLIVE', filter: 'VTuber' },
+        { id: 18, imgSrc: '../img/OIP.jpg', title: 'ANIME', filter: 'Anime' },
+        { id: 17, imgSrc: '../img/OIP.jpg', title: 'Hololive', filter: 'VTuber' },
+        { id: 16, imgSrc: '../img/OIP.jpg', title: 'Título de la Imagen 1', filter: 'Pop' },
+        { id: 15, imgSrc: '../img/OIP.jpg', title: 'HOLOLIVE', filter: 'VTuber' },
+        { id: 14, imgSrc: '../img/OIP.jpg', title: 'ANIME', filter: 'Anime' },
+        { id: 13, imgSrc: '../img/OIP.jpg', title: 'Hololive', filter: 'VTuber' },
+        { id: 12, imgSrc: '../img/OIP.jpg', title: 'Título de la Imagen 1', filter: 'Pop' },
+        { id: 11, imgSrc: '../img/OIP.jpg', title: 'HOLOLIVE', filter: 'VTuber' },
+        { id: 10, imgSrc: '../img/OIP.jpg', title: 'ANIME', filter: 'Anime' },
+        { id: 9, imgSrc: '../img/OIP.jpg', title: 'Hololive', filter: 'VTuber' },
+        { id: 8, imgSrc: '../img/id8.jpg', title: 'Ado', filter: 'Pop' },
+        { id: 7, imgSrc: '../img/id7.jpg', title: 'BABYMETAL', filter: 'Metal' },
+        { id: 6, imgSrc: '../img/id6.jpg', title: 'Hits del J-POP', filter: 'Anime' },
+        { id: 5, imgSrc: '../img/id5.jpg', title: 'OP de Animes Parte 2', filter: 'VTuber' },
+        { id: 4, imgSrc: '../img/indu1.jpg', title: 'Musica Indu - Peliculas', filter: 'Indu' },
+        { id: 3, imgSrc: '../img/id3.jpg', title: 'OP de Animes Parte 1', filter: 'Anime' },
+        { id: 2, imgSrc: '../img/anime.webp', title: 'Anime Infancia', filter: 'Anime' },
+        { id: 1, imgSrc: '../img/hololive.webp', title: 'HOLOLIVE', filter: 'VTuber' },
+        
     ];
 
     const itemsPerPage = 16;
@@ -62,8 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
         itemsToShow.forEach(item => {
             const catalogItem = document.createElement('div');
             catalogItem.classList.add('catalog-item');
+            const linkHref = getVotacionLink(item.id);
             catalogItem.innerHTML = `
-                <a href="../votacion.html?id=${item.id}">
+                <a href="${linkHref}">
                     <img src="${item.imgSrc}" alt="Imagen de ejemplo">
                     <div class="catalog-item-title">${item.title}</div>
                 </a>
@@ -74,6 +76,19 @@ document.addEventListener('DOMContentLoaded', () => {
         pageNum.textContent = page;
         checkButtons(filteredItems.length);
     }
+    //esta funcion nos servira si queremos crear mas paginas de votacion para otras plataformas , tiktok, imagenes, etc, cuestion que se puedan utilizar iframes
+
+function getVotacionLink(itemId) {
+    switch (itemId) {
+        case 666:
+            return `../votaciontoktok.html?id=${itemId}`;
+
+        default:
+            return `../votacion.html?id=${itemId}`;
+    }
+}
+
+
 
     function changePage(direction) {
         currentPage += direction;
@@ -87,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', () => {
-            currentPage = 1; // Reset to the first page whenever filters change
+            currentPage = 1; // Reiniciar a la primera página cuando cambian los filtros
             renderCatalog(currentPage, searchInput.value);
         });
     });
@@ -105,9 +120,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     searchInput.addEventListener('input', () => {
-        currentPage = 1; // Resetear a la primera página al buscar
+        currentPage = 1; // Reiniciar a la primera página al realizar una búsqueda
         renderCatalog(currentPage, searchInput.value);
     });
 
     renderCatalog(currentPage);
 });
+
