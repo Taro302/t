@@ -126,27 +126,13 @@ button:hover {
 
  /* Media Queries para Responsividad */
 @media (max-width: 768px) {
-  #video1, #video2 {
-    width: 100%; /* Cada video ocupa el 100% del contenedor en pantallas pequeñas */
-    height: auto; /* Ajusta la altura automáticamente */
-  }
-
-  #button-container {
-    flex-direction: column;
-  }
-
-  button {
-    width: 80%; /* Aumentar el ancho de los botones en pantallas pequeñas */
-  }
-}
-
-@media (max-width: 480px) {
-  #greeting {
-    font-size: 2em; /* Reducir el tamaño de la fuente en pantallas muy pequeñas */
-  }
-
-  button {
-    width: 100%; /* Botones ocupan el 100% del ancho del contenedor */
+  #tournament-title {
+    position: absolute;
+    top: 7%; /* Mueve el contenido 20% abajo de la parte superior de la pantalla */
+    left: 50%; /* Posiciona el contenido en el centro horizontal de la pantalla */
+    transform: translateX(-50%); /* Ajusta la posición horizontal al centro exacto */
+    width: 100%; /* Asegura que el div ocupe todo el ancho disponible */
+    text-align: center; /* Centra el contenido dentro del div */
   }
 }
 
