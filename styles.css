@@ -486,3 +486,35 @@ h3{
 
 
 
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        width: auto;
+        z-index: 10;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .catalog-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .new-votes {
+        background-color: #23252b;
+        padding: 20px;
+        text-align: center;
+    }
+    .catalog-item img {
+        width: 271px;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+}
+
