@@ -179,6 +179,10 @@ button:hover {
   width: 80%;
   height: 300px;
 }
+  #back-button button{
+  width: 100px;
+  text-align: center;
+}
 }
 
 
