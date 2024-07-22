@@ -20,36 +20,5 @@
     color: #000;
 }
 
-/* Estilos para pantallas más pequeñas (responsive) */
-@media (max-width: 768px) {
-    .dropdown-menu,
-    .filters ul {
-        position: absolute;
-        top: 100%; /* Coloca el menú/filtro debajo del botón/filtro */
-        left: 0;
-        background-color: #f9f9f9;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        display: none; /* Oculta el menú/filtro por defecto */
-        z-index: 1;
-        width: 100%; /* Ocupa todo el ancho disponible */
-    }
 
-    .dropdown-menu li,
-    .filters ul li {
-        text-align: center; /* Centra el texto */
-    }
 
-    .dropdown-menu li a,
-    .filters ul li a {
-        display: block;
-        padding: 12px 16px;
-        text-decoration: none;
-        color: #000;
-    }
-
-    /* Muestra el menú/filtro cuando se hace clic en el botón/filtro */
-    .dropdown-menu.show,
-    .filters ul.show {
-        display: block;
-    }
-}
