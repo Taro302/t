@@ -126,4 +126,18 @@ function getVotacionLink(itemId) {
 
     renderCatalog(currentPage);
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const filtersToggle = document.getElementById('filters-toggle');
+    const filters = document.getElementById('filters');
+
+    filtersToggle.addEventListener('click', function() {
+        if (filters.style.display === 'block') {
+            filters.style.display = 'none';
+            filtersToggle.textContent = 'FILTROS';
+        } else {
+            filters.style.display = 'block';
+            filtersToggle.textContent = 'OCULTAR FILTROS';
+        }
+    });
+});
 
