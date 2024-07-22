@@ -26,29 +26,58 @@
     </div>
     
     <div class="container">
+        <div class="span">
+            <!-- espacio para colocar spam -->
+                
+            </div>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Buscar votación...">
             <button onclick="searchVotaciones()">Buscar</button>
         </div>
         
         <div class="content">
-            <div class="filters">
-                <h3>Filtros</h3>
-                
+            <div class="filters-container">
+                <button id="filters-toggle" class="filters-toggle">FILTROS</button>
+                <div class="filters" id="filters">
                     <ul>
-                        <li><input type="checkbox" value="Pop" id="filter-pop"> Pop</li>
-                        <li><input type="checkbox" value="Rock" id="filter-rock"> Rock</li>
-                        <li><input type="checkbox" value="Electrónica" id="filter-electronica"> Electrónica</li>
-                        <li><input type="checkbox" value="K-Pop" id="filter-kpop"> K-Pop</li>
-                        <li><input type="checkbox" value="Indie" id="filter-indie"> Indie</li>
-                        <li><input type="checkbox" value="Anime" id="filter-anime"> Anime</li>
-                        <li><input type="checkbox" value="Latino" id="filter-latino"> Latino</li>
-                        <li><input type="checkbox" value="VTuber" id="filter-vtuber"> VTuber</li>
-                        <li><input type="checkbox" value="Metal" id="filter-metal"> Metal</li>
+                        <li>
+                            <input type="checkbox" value="Pop" id="filter-pop" title="Pop">
+                            <label for="filter-pop">Pop</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="Rock" id="filter-rock" title="Rock">
+                            <label for="filter-rock">Rock</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="Electrónica" id="filter-electronica" title="Electrónica">
+                            <label for="filter-electronica">Electrónica</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="K-Pop" id="filter-kpop" title="K-Pop">
+                            <label for="filter-kpop">K-Pop</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="Indie" id="filter-indie" title="Indie">
+                            <label for="filter-indie">Indie</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="Anime" id="filter-anime" title="Anime">
+                            <label for="filter-anime">Anime</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="Latino" id="filter-latino" title="Latino">
+                            <label for="filter-latino">Latino</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="VTuber" id="filter-vtuber" title="VTuber">
+                            <label for="filter-vtuber">VTuber</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="Metal" id="filter-metal" title="Metal">
+                            <label for="filter-metal">Metal</label>
+                        </li>
                     </ul>
-                    
-                    
-                
+                </div>
             </div>
             
             <div id="catalog" class="catalog">
@@ -59,12 +88,8 @@
         <div class="pagination">
             <button id="prevBtn">Anterior</button>
             <span id="pageNum">1</span>
-<button id="nextBtn">Siguiente</button>
-
-           
-    
+            <button id="nextBtn">Siguiente</button>
         </div>
-        
     </div>
     <footer>
         <p>&copy; 2024 Proyecto de Votación. Todos los derechos reservados.</p>
