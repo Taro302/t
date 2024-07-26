@@ -8,31 +8,38 @@
 </head>
 <body>
 
-<div class="navbar">
-    <div class="logo">Página de Votación</div>
-    <ul class="nav-links">
-        <li><a href="#" onclick="showContent('Inicio')">Inicio</a></li>
-        <li class="dropdown">
-            <a href="paginas/generos.html" onclick="showContent('Géneros')">Géneros</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Acción</a></li>
-                <li><a href="#">Aventura</a></li>
-                
-                <li><a href="#">Drama</a></li>
-                <li><a href="#">Fantasía</a></li>
-                <li><a href="#">Ver más</a></li>
-                        <!-- Añadir botones de login y register -->
-        <li><a href="login.php">Login</a></li>
-        <li><a href="register.php">Register</a></li>
-            </ul>
-        </li>
-        
-    </ul>
+    <div class="navbar">
+        <div class="logo">Página de Votación</div>
+        <div class="hamburger" onclick="toggleNav()">&#9776;</div> <!-- Icono de hamburguesa -->
+        <ul class="nav-links">
+            <li><a href="#" onclick="showContent('Inicio')">Inicio</a></li>
+            <li class="dropdown">
+                <a href="paginas/generos.html" onclick="showContent('Géneros')">Géneros</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Acción</a></li>
+                    <li><a href="#">Aventura</a></li>
+                    <li><a href="#">Drama</a></li>
+                    <li><a href="#">Fantasía</a></li>
+                    <li><a href="#">Ver más</a></li>
 
-<!-- Añade la estructura HTML para el perfil de usuario y la lista desplegable -->
+                </ul>
 
+            </li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="register.php">Register</a></li>
+        </ul>
+    </div>
+    <div class="nav-overlay" id="navOverlay">
+        <ul class="nav-links">
+            <li><a href="#" onclick="showContent('Inicio')">Inicio</a></li>
+            <li class="dropdown">
+                <a href="paginas/generos.html" onclick="showContent('Géneros')">Géneros</a>
 
-</div>
+            </li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="register.php">Register</a></li>
+        </ul>
+    </div>
 
 
 
