@@ -141,3 +141,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+function showGenre(genre) {
+    var content = document.getElementById('content');
+    content.innerHTML = ''; // Limpiar el contenido actual
+
+    // Aquí puedes añadir el contenido específico del género basado en el valor de `genre`
+    content.innerHTML = '<h2>Género: ' + genre + '</h2>';
+
+    // Si tienes datos específicos para cada género, puedes cargarlo aquí
+    // Por ejemplo, cargar contenido desde un archivo JSON o una API
+}
+
+function toggleNav() {
+    var navOverlay = document.getElementById('navOverlay');
+    navOverlay.classList.toggle('open');
+}
+
