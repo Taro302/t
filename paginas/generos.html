@@ -10,6 +10,7 @@
 <body>
     <div class="navbar">
         <div class="logo">Página de Votación</div>
+        <div class="hamburger" onclick="toggleNav()">&#9776;</div> <!-- Icono de hamburguesa -->
         <ul class="nav-links">
             <li><a href="../index.html" onclick="showContent('Inicio')">Inicio</a></li>
             <li class="dropdown">
@@ -20,11 +21,15 @@
                     <li><a href="#">Drama</a></li>
                     <li><a href="#">Fantasía</a></li>
                     <li><a href="#">Ver más</a></li>
+
                 </ul>
+
             </li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="register.php">Register</a></li>
         </ul>
     </div>
-        <div class="nav-overlay" id="navOverlay">
+    <div class="nav-overlay" id="navOverlay">
         <ul class="nav-links">
             <li><a href="../index.html" onclick="showContent('Inicio')">Inicio</a></li>
             <li class="dropdown">
