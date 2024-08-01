@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 16, imgSrc: '../img/OIP.jpg', title: 'Título de la Imagen 1', filter: 'Pop' },
         { id: 15, imgSrc: '../img/OIP.jpg', title: 'HOLOLIVE', filter: 'VTuber' },
         { id: 14, imgSrc: '../img/OIP.jpg', title: 'ANIME', filter: 'Anime' },
-        { id: 13, imgSrc: '../img/OIP.jpg', title: 'Hololive', filter: 'VTuber' },
+        { id: 13, imgSrc: '../img/id13.jpg', title: 'Musica Japonesa - parte 1', filter: 'Pop' },
         { id: 12, imgSrc: '../img/id12.jpg', title: 'Naruto', filter: 'Anime' },
         { id: 11, imgSrc: '../img/id11.jpg', title: 'Musica Electrónica 3', filter: 'Electrónica' },
         { id: 10, imgSrc: '../img/id10.jpg', title: 'Musica Electrónica 2', filter: 'Electrónica' },
