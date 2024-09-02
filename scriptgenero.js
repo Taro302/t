@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const catalogItems = [
         { id: 20, imgSrc: '../img/OIP.jpg', title: 'FINAL', filter: 'Rock' },
         { id: 19, imgSrc: '../img/OIP.jpg', title: 'HOLOLIVE', filter: 'VTuber' },
-        { id: 18, imgSrc: '../img/OIP.jpg', title: 'ANIME', filter: 'Anime' },
+        { id: 18, imgSrc: '../img/id18.jpg', title: 'Músicas de Perú', filter: 'Latino' },
         { id: 17, imgSrc: '../img/id17.jpg', title: 'Música Salsa y Merengue', filter: 'Latino' },
         { id: 16, imgSrc: '../img/id16.jpg', title: 'Música de Donghuas', filter: 'Asia' },
         { id: 15, imgSrc: '../img/id15.jpg', title: 'Kpop old school parte 2', filter: 'K-Pop' },
