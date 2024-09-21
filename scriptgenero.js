@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const catalogItems = [
         { id: 20, imgSrc: '../img/OIP.jpg', title: 'FINAL', filter: 'Rock' },
-        { id: 19, imgSrc: '../img/OIP.jpg', title: 'HOLOLIVE', filter: 'VTuber' },
+        { id: 19, imgSrc: '../img/id19.jpg', title: 'Musica J-pop (THE FIRST TAKE) - parte 1', filter: 'Pop' },
         { id: 18, imgSrc: '../img/id18.jpg', title: 'Músicas de Perú', filter: 'Latino' },
         { id: 17, imgSrc: '../img/id17.jpg', title: 'Música Salsa y Merengue', filter: 'Latino' },
         { id: 16, imgSrc: '../img/id16.jpg', title: 'Música de Donghuas', filter: 'Asia' },
