@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const catalogItems = [
-        { id: 20, imgSrc: '../img/OIP.jpg', title: 'FINAL', filter: 'Rock' },
+        { id: 21, imgSrc: '../img/id21.jpg', title: 'Música original de V-tubers con mas suscriptores (YouTube)', filter: 'VTuber'},
+        { id: 20, imgSrc: '../img/id20.jpg', title: 'Musica J-pop (THE FIRST TAKE) - parte 2', filter: 'Pop'},
         { id: 19, imgSrc: '../img/id19.jpg', title: 'Musica J-pop (THE FIRST TAKE) - parte 1', filter: 'Pop' },
         { id: 18, imgSrc: '../img/id18.jpg', title: 'Músicas de Perú', filter: 'Latino' },
         { id: 17, imgSrc: '../img/id17.jpg', title: 'Música Salsa y Merengue', filter: 'Latino' },
