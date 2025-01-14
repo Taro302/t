@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const catalogItems = [
+        { id: 23, imgSrc: '../img/id23.jpg', title: 'Musica Japonesa - parte 2', filter: 'Pop'},
         { id: 22, imgSrc: '../img/id22.jpg', title: 'Covers de Vtubers 1', filter: 'VTuber'},
         { id: 21, imgSrc: '../img/id21.jpg', title: 'Música original de V-tubers con mas suscriptores (YouTube)', filter: 'VTuber'},
         { id: 20, imgSrc: '../img/id20.jpg', title: 'Musica J-pop (THE FIRST TAKE) - parte 2', filter: 'Pop'},
