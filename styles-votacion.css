@@ -5,27 +5,46 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Evita el desbordamiento horizontal */
+  background-image: url('img/tierraGalaxia.jpg'); /* Cambia por la URL de tu imagen */
+  background-size:cover; /* Ajusta la imagen para cubrir toda la pantalla */
+  background-attachment: fixed; /* Fija la imagen al hacer scroll */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
+
 #tournament-header {
-  background-color: white;
-  color: black;
+ 
+  color: white;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
+  background: linear-gradient(90deg, #E65100, #4CAF50); /* Degradado naranja a verde */
+  padding: 15px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
 #back-button {
   order: 1;
 }
 
+/* Estilos para el título */
 #tournament-title {
   order: 2;
   text-align: center;
   flex-grow: 1;
+  font-size: 28px; /* Tamaño más visible */
+  font-weight: bold; /* Texto en negrita */
+  color: #ffffff; /* Blanco para resaltar */
+  user-select: none; /* Impide que se pueda seleccionar el texto */
+  -webkit-user-select: none; /* Para navegadores WebKit (Chrome, Safari) */
+  -moz-user-select: none; /* Para Firefox */
+  -ms-user-select: none; /* Para Internet Explorer */
 }
+
+
+
 
 #round-info {
   order: 3;
@@ -57,11 +76,11 @@ body {
 }
 
 #button-container {
-  display:flex;
-  
+  display: flex;
   justify-content: center;
-
+  margin-top: 140px; /* Ajusta el número de píxeles según lo que necesites */
 }
+
 
 button {
   padding: 10px 25%;
@@ -72,15 +91,38 @@ button {
 
 /* Estilos para el botón 1 */
 #vote1 {
-  background-color: white;
-  color: black;
+  background-color: #E3F2FD; /* Azul claro */
+  color: #0D47A1; /* Azul oscuro */
+  border: 2px solid #4CAF50; /* Verde */
+
+  font-size: 16px;
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#vote1:hover {
+  background-color: #4CAF50;
+  color: white;
 }
 
 /* Estilos para el botón 2 */
 #vote2 {
-  background-color: black;
+  background-color: #FFF3E0; /* Naranja claro */
+  color: #E65100; /* Naranja oscuro */
+  border: 2px solid #FF9800; /* Naranja */
+  
+  font-size: 16px;
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#vote2:hover {
+  background-color: #FF9800;
   color: white;
 }
+
 
 button:hover {
   background-color: rgb(8, 3, 3);
@@ -117,13 +159,40 @@ button:hover {
   z-index: 1; /* Asegurar que esté por encima de otros elementos */
 }
 
- h3{
+#video1 h3 {
   position: relative;
-  width: 50%;
+  width: 96%; /* Aumenta el ancho de la frase */
   height: 77px;
   text-align: center;
-  left: 25%;
- }
+  left: 2%; /* Ajusta la posición para mantenerla centrada */
+  color: #4CAF50; /* Verde */
+  font-size: 32px; /* Aumenta el tamaño de la letra */
+  font-weight: bold; /* Hace el texto más grueso */
+  text-shadow: 
+    -2px -2px 0 #E3F2FD,  
+     2px -2px 0 #E3F2FD,  
+    -2px  2px 0 #E3F2FD,  
+     2px  2px 0 #E3F2FD; /* Borde blanco más notorio */
+}
+
+#video2 h3 {
+  position: relative;
+  width: 96%; /* Aumenta el ancho de la frase */
+  height: 77px;
+  text-align: center;
+  left: 2%; /* Ajusta la posición para mantenerla centrada */
+  color: #E65100; /* Naranja oscuro */
+  font-size: 32px; /* Aumenta el tamaño de la letra */
+  font-weight: bold; /* Hace el texto más grueso */
+  text-shadow: 
+    -2px -2px 0 #FFF3E0,  
+     2px -2px 0 #FFF3E0,  
+    -2px  2px 0 #FFF3E0,  
+     2px  2px 0 #FFF3E0; /* Borde blanco más notorio */
+}
+
+
+
 
  /* Media Queries para Responsividad */
 /* Estilos para pantallas pequeñas (ancho máximo de 768px) */
